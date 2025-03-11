@@ -340,16 +340,17 @@ The owner collects the second-highest bid amount.
 function resetAuction() external onlyOwner {
     require(auctionEnded, "Cannot reset while auction is active");
 
-    delete bids;
-    for (uint256 i = 0; i < MAX_USERS; i++) {
+    for (uint256 i = 0; i < bids.length; i++) {
         delete userBids[bids[i].bidder];
     }
 
+    delete bids;
+
     winner = address(0);
+    winningBid = 0;
+    secondHighestBid = 0;
     auctionEnded = false;
 }
 ```
 Clears all bid data and resets the auction.
-
----
 
