@@ -18,7 +18,6 @@ Whether you're exploring **smart contract development**, testing on a **live tes
 - [Addresses](#addresses)
   - [Faucet](#faucet)
   - [Augmented Faucet](#augmented-faucet)
-  - [Vickrey Auction for 4 users](#vickrey-auction-for-4-users)
   - [Vickrey Auction for 2 users](#vickrey-auction-for-2-users)
 - [Code Structure](#code-structure)
   - [Faucet Contract - Structure and Core Functions](#faucet-contract---structure-and-core-functions)
@@ -84,18 +83,11 @@ Deployed on the Sepolia testnet and available at:
 [View on Etherscan](https://sepolia.etherscan.io/address/0x6A7384e2DBf1386C459EC8FE54f81a84f72fF716)
 
 
-## Vickrey Auction for 4 users
-Deployed on the Sepolia testnet and available at:
->0x081f5ad6be6641ce28f830b94c873a120e5af7a2
-
-[View on Etherscan](https://sepolia.etherscan.io/address/0x081f5ad6be6641ce28f830b94c873a120e5af7a2)
-
-
 ## Vickrey Auction for 2 users
 Deployed on the Sepolia testnet and available at:
->0x90C34817eE4B86278EDAc68c127B60A95c1cE8d9
+>0x9fE99A543cB83e8B58ac78EEC56C8aF46F5bD30E
 
-[View on Etherscan](https://sepolia.etherscan.io/address/0x90C34817eE4B86278EDAc68c127B60A95c1cE8d9)
+[View on Etherscan](https://sepolia.etherscan.io/address/0x9fE99A543cB83e8B58ac78EEC56C8aF46F5bD30E)
 
 
 # Code Structure

@@ -95,18 +95,21 @@ contract VickreyAuction {
 
     // Reset auction for a new round
     function resetAuction() external onlyOwner {
-        require(auctionEnded, "Cannot reset while auction is active");
+    require(auctionEnded, "Cannot reset while auction is active");
 
-        delete bids;
-        for (uint256 i = 0; i < MAX_USERS; i++) {
-            delete userBids[bids[i].bidder];
-        }
-
-        winner = address(0);
-        winningBid = 0;
-        secondHighestBid = 0;
-        auctionEnded = false;
+    // Clear mapping before deleting the array
+    for (uint256 i = 0; i < bids.length; i++) {
+        delete userBids[bids[i].bidder];
     }
+
+    delete bids; // Now it's safe to delete the array
+
+    winner = address(0);
+    winningBid = 0;
+    secondHighestBid = 0;
+    auctionEnded = false;
+}
+
 
     // Function to view current bids (for debugging)
     function getBids() external view returns (Bid[] memory) {
